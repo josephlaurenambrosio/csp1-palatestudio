@@ -1,0 +1,192 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*INDEX.HTML*/
+
+body {
+	background-color: white;
+}
+
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+p,
+button {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Oswald', sans-serif;
+}
+
+hr {
+	border: 5px solid #F7CA18;
+}
+
+/*navbar*/
+
+
+section#navbar {
+	font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+	letter-spacing: 2px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-nav .nav-item {
+	font-weight: 600;
+	color: rgba(255, 255, 255, .5);
+	background-color: transparent;
+	border-bottom: .25rem solid transparent;
+}
+
+.navbar-nav .nav-item:hover,
+.navbar-nav .nav-item:focus {
+	border-bottom-color: rgba(0, 0, 0, 1);
+}
+
+
+.navbar-nav .active {
+	color: black;
+	border-bottom-color: black;
+}
+
+
+/*cover*/
+
+section#cover {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+
+.content img {
+	height: 600px;
+	width: 900px;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+
+.content {
+	padding-top: 0px;
+	padding-bottom: 50px;
+}
+
+#talktous {
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-weight: bold;
+}
+
+
+section#cover h2 {
+	letter-spacing: 2px;
+}
+
+/*footer*/
+
+section#footer {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	box-shadow: -5px -5px 5px 0 rgba(0, 0, 0, 0.2), -5px -5px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+section#footer ul li {
+	display: inline;
+
+}
+
+section#footer img {
+	height: 40px;
+	width: 40px;
+}
+
+/*about.html*/
+section#about {
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+section#team {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+section#team img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+.row.first {
+	background-color: #222;
+	color: white;
+}
+
+.row.second {
+	background-color: #F7CA18;
+}
+
+.content1,
+.content2 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+/*services.html*/
+
+section#services h3 {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+section#services h2,
+section#rates h2 {
+    overflow: hidden;
+    text-align: center;
+}
+section#services h2:before,
+section#rates h2:before,
+section#services h2:after,
+section#rates h2:after {
+    background-color: #F7CA18;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+section#services h2:before,
+section#rates h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+section#services h2:after, 
+section#rates h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
