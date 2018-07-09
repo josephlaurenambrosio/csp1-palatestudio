@@ -7,14 +7,25 @@
 
 /*INDEX.HTML*/
 
-body {
+body,
+html {
 	background-color: white;
+	height: 100%;
 }
 
 
 .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+#imglogo {
+	height: 50px;
+	width: 50px;
+}
+
+.logo {
+	font-size: 30px;
 }
 
 .row {
@@ -35,7 +46,9 @@ h3 {
 }
 
 hr {
-	border: 5px solid #F7CA18;
+	border: 3px solid #F7CA18;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /*navbar*/
@@ -46,6 +59,14 @@ section#navbar {
 	font-size: 17px;
 	letter-spacing: 2px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section#navbar .logo {
+	color: black;
+}
+
+section#navbar a {
+	text-decoration: none;
 }
 
 .navbar-nav .nav-item {
@@ -73,19 +94,26 @@ section#cover {
 	display: flex;
 	align-items: center;
 	text-align: center;
-	width: 100%;
+	/*background: url('../img/coverimage.jpg') no-repeat center center;*/
+	/*height: 100%;*/
+	/*background-size: cover;*/
 }
 
+
+
 .content img {
-	height: 600px;
-	width: 900px;
-	padding-top: 50px;
-	padding-bottom: 40px;
+	height: 550px;
+	width: 850px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border: 10px solid #F7CA18;
 }
 
 .content {
 	padding-top: 0px;
 	padding-bottom: 50px;
+	width: 100%;
 }
 
 #talktous {
@@ -106,6 +134,8 @@ section#footer {
 	padding-top: 20px;
 	padding-bottom: 5px;
 	box-shadow: -5px -5px 5px 0 rgba(0, 0, 0, 0.2), -5px -5px 5px 0 rgba(0, 0, 0, 0.19);
+	padding-right: 0;
+	padding-left: 0;	
 }
 
 section#footer ul li {
@@ -130,12 +160,16 @@ section#team {
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	background: url('../img/city.jpg') no-repeat center center;
+	background-attachment: fixed;
 }
 
 section#team img {
-	height: 200px;
-	width: 200px;
+	height: 160px;
+	width: 150px;
 	border-radius: 50%;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .row.first {
@@ -153,6 +187,30 @@ section#team img {
 	padding-bottom: 20px;
 }
 
+section#contact {
+	min-height: 120vh;
+	margin: 0 auto;
+	width: 60%;
+}
+
+.contactheader {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+textarea {
+	min-height: 100%;
+	resize: none;
+}
+
+.story {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+
+
 
 /*services.html*/
 
@@ -162,31 +220,195 @@ section#services h3 {
 	text-align: center;
 }
 
+
 section#services h2,
 section#rates h2 {
-    overflow: hidden;
-    text-align: center;
+	overflow: hidden;
+	text-align: center;
 }
+
+/*yellow lines*/
 section#services h2:before,
+section#services h2:after {
+	background-color: #F7CA18;
+	content: "";
+	display: inline-block;
+	height: 7px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+section#services h2:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+section#services h2:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+/*black lines*/
 section#rates h2:before,
-section#services h2:after,
 section#rates h2:after {
-    background-color: #F7CA18;
-    content: "";
-    display: inline-block;
-    height: 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
+	background-color: black;
+	content: "";
+	display: inline-block;
+	height: 7px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
 }
-section#services h2:before,
 section#rates h2:before {
-    right: 0.5em;
-    margin-left: -50%;
+	right: 0.5em;
+	margin-left: -50%;
 }
-section#services h2:after, 
 section#rates h2:after {
-    left: 0.5em;
-    margin-right: -50%;
+	left: 0.5em;
+	margin-right: -50%;
 }
+
+.pwyw h1 {
+	font-size: 250px;
+	color: #F7CA18;
+}
+
+span.pwyw {
+	font-weight: bold;
+}
+
+#pwywcontent {
+	font-size: 15px;
+}
+
+
+/*sample works*/
+section#gallery {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+section#gallery img {
+	height: 300px;
+	width: 300px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+	section#contact {
+		min-height: 120vh;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	section#cover img {
+		height: 300px;
+		width: 300px;
+	}
+
+	#serviceimg {
+		margin-bottom: 0;
+	}
+
+	.pwyw h1 {
+		font-size: 100px;
+	}
+
+	section#services h2,
+	section#rates h2 {
+		font-size: 40px;
+	}
+
+	section#about h1,
+	section#contact h1 {
+		font-size: 60px;
+	}
+
+	.story {
+		font-size: 15px;
+	}
+
+	section#contact {
+		padding-bottom: 20px;
+	}
+
+	.logo,
+	#imglogo {
+		font-size: 15px;
+		margin: 0;
+		padding: 0;
+	}
+
+	section#navbar > div.container-fluid > div.row > div.col-sm-12 {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+}
+
+
+
+@media (max-width: 991.98px) {
+	section#contact {
+		width: 100%;
+		margin: 0 auto;
+		min-height: 70vh;
+	}
+
+	section#servicesdetails .row.features {
+		padding-bottom: 20px;
+	}
+
+	section#gallery img {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	section#gallery .row.gallery {
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	section#gallery img {
+		height: 300px;
+		width: 330px;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+
+
 
